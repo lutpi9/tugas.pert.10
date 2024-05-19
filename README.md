@@ -165,7 +165,13 @@ Misalnya, jika ada tabel Orders yang memiliki foreign key yang mereferensikan ta
 
  jadi, `RESTRICT` digunakan untuk mencegah penghapusan atau pembaruan data induk jika ada referensi dari data anak.
 `CASCADE` digunakan untuk memastikan bahwa penghapusan atau pembaruan data induk secara otomatis diterapkan pada data anak yang terkait.
-
+## berikan kesimpulan anda!
+*SQL constraints* adalah aturan yang diterapkan pada kolom dalam tabel untuk membatasi jenis data yang dapat dimasukkan ke dalam tabel tersebut. Beberapa jenis constraints yang umum digunakan termasuk PRIMARY KEY, FOREIGN KEY, UNIQUE, CHECK, dan NOT NULL.
+Constraints membantu menjaga integritas dan konsistensi data dalam basis data.
+*RESTRICT* adalah aturan yang mencegah penghapusan atau pembaruan pada data induk jika ada data anak yang mereferensikan data tersebut.
+ Digunakan untuk menjaga referensial integritas dengan mencegah operasi yang dapat menyebabkan inkonsistensi data.
+*CASCADE* adalah aturan yang menyebabkan penghapusan atau pembaruan pada data induk secara otomatis diterapkan pada data anak yang mereferensikan data tersebut.
+ Digunakan untuk memastikan bahwa operasi penghapusan atau pembaruan pada data induk secara otomatis diterapkan pada data anak yang terkait, menjaga konsistensi data secara otomatis.
 
 
 
