@@ -84,6 +84,22 @@ ON DELETE SET NULL;
 
 ## outputnya:
 ![6 2 yg plng baru](https://github.com/lutpi9/tugas.pert.10/assets/147919251/e33b379a-eb4e-4368-973d-c1ec491927c9)
+Dengan perubahan di atas, ketika Anda menghapus record dari tabel "dosen" yang memiliki referensi di tabel "mahasiswa", nilai kolom "kd_ds" dalam tabel "mahasiswa" yang mengacu pada record yang dihapus akan diatur menjadi NULL.
+
+Setelah menjalankan perintah di atas, Anda dapat kembali mencoba menghapus record dengan menggunakan perintah berikut:
+
+## *7. Lakukan penghapusan data pada table dosen*
+```
+DELETE FROM dosen WHERE kd_ds = 'DS003';
+```
+## outputnya:
+![7](https://github.com/lutpi9/tugas.pert.10/assets/147919251/26f33725-b4b1-4525-8000-9bb151dc54a4)
+
+Perintah ini akan menghapus record dengan nilai "DS003" dari tabel "dosen", dan karena menggunakan opsi ON DELETE SET NULL, nilai kolom "kd_ds" dalam tabel "mahasiswa" yang mengacu pada record yang dihapus akan diatur menjadi NULL.
+
+## *Evaluasi dan Pertanyaan*
+
+
 
 
 
