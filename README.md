@@ -8,5 +8,5 @@
 | Kelas          | TI.23.A.5            |
 | Mata Kuliah    |Basis data            |
 
-1. Lakukan penambahan data pada table mahasiswa dengan mengisi kd_ds yang
-belum ada pada data dosen.
+##*1. Lakukan penambahan data pada table mahasiswa dengan mengisi kd_ds yang
+belum ada pada data dosen.*
