@@ -123,7 +123,7 @@ REFERENCES dosen(kd_ds)
 ## • Mengubah data
 ```
 UPDATE mahasiswa
-SET kd_ds = 'DS001' WHERE nim = 112233445;
+SET kd_ds = 'DS001' WHERE nim = 34343456;
 ```
 ## • Menampilkan CREATE TABLE
 ```
@@ -148,7 +148,7 @@ ADD CONSTRAINT <nama_constraint_baru> FOREIGN KEY (field) REFERENCES <table_refe
 ## • Mengubah data
 ```
 UPDATE dosen
-SET kd_ds = 'DS006' WHERE nama = 'Haha Hihi';
+SET kd_ds = 'DS006' WHERE nama = 'SAYA';
 ```
 ## •Menghapus data
 ```
