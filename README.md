@@ -99,9 +99,72 @@ Perintah ini akan menghapus record dengan nilai "DS003" dari tabel "dosen", dan 
 
 ## *Evaluasi dan Pertanyaan*
 
+## Tulis semua perintah-perintah SQL percobaan di atas beserta outputnya!
+## • Membuat foreign key
 
+*Dalam ALTER TABLE:*
 
+```
+ALTER TABLE mahasiswa
+ADD CONSTRAINT fk_dosen
+FOREIGN KEY (kd_ds) REFERENCES dosen(kd_ds)
+```
+*Dalam CREATE TABLE:*
+```
+CREATE TABLE mahasiswa(
+nim VARCHAR(10) NOT NULL,
+nama VARCHAR(100) NOT NULL,
+kd_ds VARCHAR(10),
+PRIMARY KEY(nim),
+CONSTRAINT fk_Dosen FOREIGN KEY (kd_ds)
+REFERENCES dosen(kd_ds)
+);
+```
+## • Mengubah data
+```
+UPDATE mahasiswa
+SET kd_ds = 'DS001' WHERE nim = 112233445;
+```
+## • Menampilkan CREATE TABLE
+```
+SHOW CREATE TABLE  mahasiswa;
+Mode ON UPDATE CASCADE ON DELETE CASCADE
+```
+```
+ALTER TABLE mahasiswa
+DROP FOREIGN KEY fk_mahasiswa_dosen,
+ADD CONSTRAINT fk_dosen FOREIGN KEY (kd_ds) REFERENCES dosen(kd_ds) ON UPDATE CASCADE ON DELETE CASCADE;
+```
+## • Menghapus data
+```
+DELETE FROM dosen WHERE kd_ds = 'DS001';
+Mode ON UPDATE CASCADE ON DELETE NOT NULL
+```
+```
+ALTER TABLE <table>
+DROP FOREIGN KEY <nama_constraint_lama>,
+ADD CONSTRAINT <nama_constraint_baru> FOREIGN KEY (field) REFERENCES <table_references(filed_references)> ON UPDATE CASCADE ON DELETE NOT NULL;
+```
+## • Mengubah data
+```
+UPDATE dosen
+SET kd_ds = 'DS006' WHERE nama = 'Haha Hihi';
+```
+## •Menghapus data
+```
+DELETE FROM dosen WHERE nim = 'DS003';
+```
+## Apa bedanya penggunaan RESTRICT dan penggunaan CASCADE
+## RESTRICT
+RESTRICT berarti bahwa operasi penghapusan atau pembaruan pada data induk (parent) akan dicegah jika ada data anak (child) yang mereferensikan data tersebut.
+Misalnya, jika ada tabel Orders yang memiliki foreign key yang mereferensikan tabel Customers, dan aturan referensialnya menggunakan RESTRICT, Anda tidak dapat menghapus baris dalam Customers jika ada baris dalam Orders yang masih mereferensikan baris tersebut.
 
+## CASCADE
+CASCADE berarti bahwa operasi penghapusan atau pembaruan pada data induk (parent) akan menyebabkan operasi yang sama secara otomatis diterapkan pada data anak (child) yang mereferensikan data tersebut.
+Misalnya, jika ada tabel Orders yang memiliki foreign key yang mereferensikan tabel Customers, dan aturan referensialnya menggunakan CASCADE, menghapus baris dalam Customers akan secara otomatis menghapus semua baris terkait dalam Orders.
+
+ jadi, `RESTRICT` digunakan untuk mencegah penghapusan atau pembaruan data induk jika ada referensi dari data anak.
+`CASCADE` digunakan untuk memastikan bahwa penghapusan atau pembaruan data induk secara otomatis diterapkan pada data anak yang terkait.
 
 
 
