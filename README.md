@@ -179,6 +179,9 @@ Constraints membantu menjaga integritas dan konsistensi data dalam basis data.
  
 •*CASCADE* adalah aturan yang menyebabkan penghapusan atau pembaruan pada data induk secara otomatis diterapkan pada data anak yang mereferensikan data tersebut.
  Digunakan untuk memastikan bahwa operasi penghapusan atau pembaruan pada data induk secara otomatis diterapkan pada data anak yang terkait, menjaga konsistensi data secara otomatis.
+## LAPORAN PRAKTIKUM 
+
+https://drive.google.com/file/d/1U7nIW0VuN90NXuqcu54LSN12_VBzmJkm/view?usp=drivesdk
 
 ## *SEKIAN TERIMAKASIH*
 
